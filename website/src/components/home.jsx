@@ -36,8 +36,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { VscCheckAll } from "react-icons/vsc";
 import { TbSettingsCheck } from "react-icons/tb";
 
-
-
 const CountUp = ({ end, duration = 2000, suffix = "", prefix = "" }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -209,8 +207,8 @@ const Home = () => {
   };
 
   const headingGradientStyle = {
-      fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-    fontWeight: '700',
+    fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+    fontWeight: "700",
     background: COLORS.primary.green400,
     WebkitBackgroundClip: "text",
     paddingBottom: "0.25rem",
@@ -409,7 +407,7 @@ const Home = () => {
     },
   ];
 
-    const handleAction = (action) => {
+  const handleAction = (action) => {
     if (action === "call") {
       window.location.href = "tel:+263785948128";
     } else if (action === "email") {
@@ -540,7 +538,7 @@ const Home = () => {
             </motion.div>
 
             {/* Hero Image/Animation */}
-<motion.div
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -579,32 +577,34 @@ const Home = () => {
                       border: `4px solid ${COLORS.accent.yellow200}`,
                     }}
                   />
-                  
+
                   {/* Glassy Green Background Container */}
-                  <div style={{
-                    ...centerCircleStyle,
-                    background: `linear-gradient(135deg, 
+                  <div
+                    style={{
+                      ...centerCircleStyle,
+                      background: `linear-gradient(135deg, 
                       rgba(34, 197, 94, 0.3) 0%, 
                       rgba(22, 163, 74, 0.4) 50%, 
                       rgba(21, 128, 61, 0.3) 100%)`,
-                    backdropFilter: 'blur(20px)',
-                    WebkitBackdropFilter: 'blur(20px)',
-                    border: `2px solid rgba(34, 197, 94, 0.3)`,
-                    boxShadow: `
+                      backdropFilter: "blur(20px)",
+                      WebkitBackdropFilter: "blur(20px)",
+                      border: `2px solid rgba(34, 197, 94, 0.3)`,
+                      boxShadow: `
                       0 8px 32px rgba(34, 197, 94, 0.3),
                       inset 0 1px 0 rgba(255, 255, 255, 0.2),
                       inset 0 -1px 0 rgba(0, 0, 0, 0.1),
                       0 0 80px rgba(34, 197, 94, 0.2)
                     `,
-                    position: 'relative',
-                    overflow: 'hidden',
-                  }}>
+                      position: "relative",
+                      overflow: "hidden",
+                    }}
+                  >
                     {/* Shimmer/Water Effect */}
                     <motion.div
                       animate={{
                         background: [
-                          'linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
-                          'linear-gradient(225deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
+                          "linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
+                          "linear-gradient(225deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
                         ],
                       }}
                       transition={{
@@ -613,12 +613,12 @@ const Home = () => {
                         ease: "linear",
                       }}
                       style={{
-                        position: 'absolute',
+                        position: "absolute",
                         inset: 0,
                         borderRadius: RADIUS.full,
                       }}
                     />
-                    
+
                     {/* Floating Particles Effect */}
                     <motion.div
                       animate={{
@@ -631,14 +631,14 @@ const Home = () => {
                         ease: "easeInOut",
                       }}
                       style={{
-                        position: 'absolute',
-                        top: '20%',
-                        left: '30%',
-                        width: '10px',
-                        height: '10px',
-                        borderRadius: '50%',
-                        background: 'rgba(255, 255, 255, 0.4)',
-                        filter: 'blur(2px)',
+                        position: "absolute",
+                        top: "20%",
+                        left: "30%",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                        background: "rgba(255, 255, 255, 0.4)",
+                        filter: "blur(2px)",
                       }}
                     />
                     <motion.div
@@ -653,14 +653,14 @@ const Home = () => {
                         delay: 1,
                       }}
                       style={{
-                        position: 'absolute',
-                        top: '60%',
-                        right: '25%',
-                        width: '8px',
-                        height: '8px',
-                        borderRadius: '50%',
-                        background: 'rgba(255, 255, 255, 0.5)',
-                        filter: 'blur(2px)',
+                        position: "absolute",
+                        top: "60%",
+                        right: "25%",
+                        width: "8px",
+                        height: "8px",
+                        borderRadius: "50%",
+                        background: "rgba(255, 255, 255, 0.5)",
+                        filter: "blur(2px)",
                       }}
                     />
                     <motion.div
@@ -675,33 +675,36 @@ const Home = () => {
                         delay: 2,
                       }}
                       style={{
-                        position: 'absolute',
-                        bottom: '30%',
-                        left: '20%',
-                        width: '12px',
-                        height: '12px',
-                        borderRadius: '50%',
-                        background: 'rgba(255, 255, 255, 0.3)',
-                        filter: 'blur(3px)',
+                        position: "absolute",
+                        bottom: "30%",
+                        left: "20%",
+                        width: "12px",
+                        height: "12px",
+                        borderRadius: "50%",
+                        background: "rgba(255, 255, 255, 0.3)",
+                        filter: "blur(3px)",
                       }}
                     />
-                    
+
                     {/* Inner Glow */}
-                    <div style={{
-                      position: 'absolute',
-                      inset: '10%',
-                      borderRadius: RADIUS.full,
-                      background: 'radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%)',
-                    }} />
-                    
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: "10%",
+                        borderRadius: RADIUS.full,
+                        background:
+                          "radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%)",
+                      }}
+                    />
+
                     {/* Leaf Icon */}
                     <GiFallingLeaf
                       size={100}
-                      style={{ 
+                      style={{
                         color: COLORS.neutral.white,
-                        position: 'relative',
+                        position: "relative",
                         zIndex: 10,
-                        filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))',
+                        filter: "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))",
                       }}
                       className="animate-pulse-slow"
                     />
@@ -906,8 +909,7 @@ const Home = () => {
                 style={{
                   position: "absolute",
                   inset: 0,
-                  backgroundImage:
-                    "url(/10.jpg)",
+                  backgroundImage: "url(/10.jpg)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   zIndex: 0,
@@ -975,7 +977,7 @@ const Home = () => {
                   zIndex: 2,
                 }}
               >
-                < GiBookmarklet
+                <GiBookmarklet
                   style={{ color: "rgba(255, 255, 255, 0.4)" }}
                   size={64}
                 />
@@ -1000,15 +1002,16 @@ const Home = () => {
                 justifyContent: "space-between",
                 position: "relative",
                 overflow: "hidden",
+                minHeight: "300px", // Added explicit min-height
               }}
+              className="medium-service-card"
             >
               {/* Background Image */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  backgroundImage:
-                    "url(/14.jpg)",
+                  backgroundImage: "url(/14.jpg)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   zIndex: 0,
@@ -1050,23 +1053,24 @@ const Home = () => {
                     fontSize: "1.25rem",
                     fontWeight: "700",
                     color: COLORS.neutral.white,
-                    marginBottom: "0.5rem",
+                    marginBottom: "0.75rem",
+                    lineHeight: "1.3",
                   }}
                 >
                   MRV & Verification
                 </h3>
+                <p
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontSize: "0.875rem",
+                    lineHeight: "1.6",
+                    position: "relative",
+                    zIndex: 2,
+                  }}
+                >
+                  Rigorous monitoring, reporting, and verification services
+                </p>
               </div>
-              <p
-                style={{
-                  color: "rgba(255, 255, 255, 0.95)",
-                  fontSize: "0.875rem",
-                  lineHeight: "1.5",
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              >
-                Rigorous monitoring, reporting, and verification services
-              </p>
             </motion.div>
 
             {/* Project Incubation - Medium Card */}
@@ -1086,15 +1090,16 @@ const Home = () => {
                 justifyContent: "space-between",
                 position: "relative",
                 overflow: "hidden",
+                minHeight: "300px", // Added explicit min-height
               }}
+              className="medium-service-card"
             >
               {/* Background Image */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  backgroundImage:
-                    "url(18.jpg)",
+                  backgroundImage: "url(/18.jpg)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   zIndex: 0,
@@ -1136,23 +1141,25 @@ const Home = () => {
                     fontSize: "1.25rem",
                     fontWeight: "700",
                     color: COLORS.neutral.white,
-                    marginBottom: "0.5rem",
+                    marginBottom: "0.75rem",
+                    lineHeight: "1.3",
                   }}
                 >
                   Project Incubation
                 </h3>
+                <p
+                  style={{
+                    color: "rgba(255, 255, 255, 0.95)",
+                    fontSize: "0.875rem",
+                    lineHeight: "1.6",
+                    position: "relative",
+                    zIndex: 2,
+                  }}
+                >
+                  Support for bankable climate projects from concept to
+                  execution
+                </p>
               </div>
-              <p
-                style={{
-                  color: "rgba(255, 255, 255, 0.95)",
-                  fontSize: "0.875rem",
-                  lineHeight: "1.5",
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              >
-                Support for bankable climate projects from concept to execution
-              </p>
             </motion.div>
 
             {/* Green Skills Academy - Large Horizontal Card (Spans 2 columns) */}
@@ -1249,38 +1256,106 @@ const Home = () => {
           </div>
 
           {/* Responsive Styles for Mobile */}
+          {/* Responsive Styles for Mobile */}
           <style>{`
-      @media (max-width: 1024px) {
-        .bento-grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-          grid-template-rows: auto !important;
-        }
-        .bento-grid > div {
-          grid-column: span 1 !important;
-          grid-row: span 1 !important;
-          min-height: 250px;
-        }
-        .bento-grid > div:first-child {
-          grid-column: span 2 !important;
-        }
-        .bento-grid > div:last-child {
-          grid-column: span 2 !important;
-        }
-      }
-      @media (max-width: 640px) {
-        .bento-grid {
-          grid-template-columns: 1fr !important;
-        }
-        .bento-grid > div {
-          grid-column: span 1 !important;
-          min-height: 200px;
-        }
-      }
-    `}</style>
+  @media (max-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-rows: auto !important;
+      gap: 1rem !important;
+    }
+    .bento-grid > div {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+      min-height: 280px !important;
+    }
+    .bento-grid > div:first-child {
+      grid-column: span 2 !important;
+      min-height: 320px !important;
+    }
+    .bento-grid > div:last-child {
+      grid-column: span 2 !important;
+      min-height: 240px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bento-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    .bento-grid > div {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+      min-height: 280px !important;
+      padding: 1.75rem !important;
+    }
+    .bento-grid > div:first-child {
+      grid-column: span 1 !important;
+      min-height: 350px !important;
+    }
+    .bento-grid > div:last-child {
+      grid-column: span 1 !important;
+      min-height: 240px !important;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .bento-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    .bento-grid > div {
+      grid-column: span 1 !important;
+      min-height: 260px !important;
+      padding: 1.5rem !important;
+    }
+    .bento-grid > div:first-child {
+      grid-column: span 1 !important;
+      min-height: 320px !important;
+    }
+    .bento-grid > div:nth-child(2),
+    .bento-grid > div:nth-child(3) {
+      grid-column: span 1 !important;
+      min-height: 260px !important;
+    }
+    .bento-grid > div:last-child {
+      grid-column: span 1 !important;
+      min-height: 220px !important;
+    }
+    
+    /* Typography adjustments for mobile */
+    .bento-grid h3 {
+      font-size: 1.25rem !important;
+      line-height: 1.3 !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .bento-grid p {
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bento-grid > div {
+      min-height: 240px !important;
+      padding: 1.25rem !important;
+    }
+    .bento-grid > div:first-child {
+      min-height: 300px !important;
+    }
+    .bento-grid h3 {
+      font-size: 1.125rem !important;
+    }
+    .bento-grid p {
+      font-size: 0.875rem !important;
+    }
+  }
+`}</style>
         </div>
       </section>
 
-            {/* Floating Action Elements */}
+      {/* Floating Action Elements */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <button
           className="group bg-gradient-to-r from-green-400 via-green-600 to-primary-dark hover:bg-green-300 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300"
