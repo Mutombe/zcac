@@ -1,4 +1,4 @@
-// Resources.jsx
+// Resources.jsx - Improved Mobile Responsive Version
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -167,13 +167,15 @@ const videos = [
     : categories.filter(cat => cat.title === activeCategory);
 
   return (
-    <div style={{ paddingTop: "5rem", background: COLORS.neutral.gray50 }}>
+    <div style={{ paddingTop: "6.5rem", background: COLORS.neutral.gray50 }}>
       {/* Hero Section with Background Image */}
       <section style={{
         position: 'relative',
-        padding: '6rem 0',
+        padding: '3rem 0',
         overflow: 'hidden',
-      }}>
+      }}
+      className="sm:py-20 md:py-24"
+      >
         {/* Background Image */}
         <div style={{
           position: 'absolute',
@@ -205,39 +207,46 @@ const videos = [
               gap: '0.5rem',
               background: 'rgba(255, 255, 255, 0.15)',
               backdropFilter: 'blur(10px)',
-              padding: '0.75rem 1.5rem',
+              padding: '0.5rem 1rem',
               borderRadius: RADIUS.full,
-              marginBottom: '2rem',
+              marginBottom: '1.5rem',
               border: '1px solid rgba(255, 255, 255, 0.2)',
-            }}>
-              <Sparkles size={18} style={{ color: COLORS.accent.yellow400 }} />
-              <span style={{ color: COLORS.neutral.white, fontWeight: '600', fontSize: '0.875rem' }}>
+            }}
+            className="sm:py-3 sm:px-6"
+            >
+              <Sparkles size={16} style={{ color: COLORS.accent.yellow400 }} className="sm:w-5 sm:h-5" />
+              <span style={{ color: COLORS.neutral.white, fontWeight: '600', fontSize: '0.75rem' }} className="sm:text-sm">
                 KNOWLEDGE HUB
               </span>
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+              fontSize: 'clamp(2rem, 8vw, 4.5rem)',
               fontWeight: '700',
               color: COLORS.neutral.white,
-              marginBottom: '1.5rem',
+              marginBottom: '1rem',
               lineHeight: '1.1',
-            }}>
+            }}
+            className="sm:mb-6"
+            >
               Resource Library
             </h1>
 
             <p style={{
-              fontSize: '1.25rem',
+              fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
               color: 'rgba(255, 255, 255, 0.95)',
-              marginBottom: '3rem',
+              marginBottom: '2rem',
               maxWidth: '42rem',
-              margin: '0 auto 3rem',
-            }}>
+              margin: '0 auto 2rem',
+              padding: '0 1rem',
+            }}
+            className="sm:mb-12"
+            >
               Access our comprehensive library of policy documents, technical guides, training materials, and research reports
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
               {[
                 { number: '250+', label: 'Resources', icon: HiOutlineDocumentChartBar },
                 { number: '50K+', label: 'Downloads', icon: HiArrowTrendingUp },
@@ -251,21 +260,22 @@ const videos = [
                   style={{
                     background: 'rgba(255, 255, 255, 0.1)',
                     backdropFilter: 'blur(10px)',
-                    padding: '1.5rem 1rem',
+                    padding: '1.25rem 1rem',
                     borderRadius: RADIUS.lg,
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                   }}
+                  className="sm:p-6"
                 >
-                  <stat.icon size={24} style={{ color: COLORS.accent.yellow400, margin: '0 auto 0.5rem' }} />
+                  <stat.icon size={20} style={{ color: COLORS.accent.yellow400, margin: '0 auto 0.5rem' }} className="sm:w-6 sm:h-6" />
                   <h3 style={{
-                    fontSize: '2rem',
+                    fontSize: 'clamp(1.5rem, 4vw, 2rem)',
                     fontWeight: '700',
                     color: COLORS.neutral.white,
                     marginBottom: '0.25rem',
                   }}>
                     {stat.number}
                   </h3>
-                  <p style={{ fontSize: '0.875rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                  <p style={{ fontSize: 'clamp(0.75rem, 2vw, 0.875rem)', color: 'rgba(255, 255, 255, 0.8)' }}>
                     {stat.label}
                   </p>
                 </motion.div>
@@ -276,13 +286,13 @@ const videos = [
       </section>
 
       {/* Search and Filter Bar */}
-      <section style={{ padding: '2rem 0', background: COLORS.neutral.white }}>
+      <section style={{ padding: '1.5rem 0', background: COLORS.neutral.white }} className="sm:py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col gap-4 items-stretch">
             {/* Search */}
-            <div style={{ position: 'relative', flex: 1, maxWidth: '500px' }}>
+            <div style={{ position: 'relative', width: '100%' }}>
               <Search 
-                size={20} 
+                size={18} 
                 style={{
                   position: 'absolute',
                   left: '1rem',
@@ -290,6 +300,7 @@ const videos = [
                   transform: 'translateY(-50%)',
                   color: COLORS.neutral.gray400,
                 }}
+                className="sm:w-5 sm:h-5"
               />
               <input
                 type="text"
@@ -298,13 +309,14 @@ const videos = [
                 onChange={(e) => setSearchQuery(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '0.875rem 1rem 0.875rem 3rem',
+                  padding: '0.75rem 1rem 0.75rem 2.75rem',
                   borderRadius: RADIUS.lg,
                   border: `2px solid ${COLORS.neutral.gray200}`,
-                  fontSize: '1rem',
+                  fontSize: '0.875rem',
                   outline: 'none',
                   transition: 'all 0.3s ease',
                 }}
+                className="sm:py-4 sm:text-base"
                 onFocus={(e) => {
                   e.target.style.borderColor = COLORS.primary.green500;
                   e.target.style.boxShadow = `0 0 0 3px ${COLORS.primary.green100}`;
@@ -330,7 +342,7 @@ const videos = [
                   key={category}
                   onClick={() => setActiveCategory(category)}
                   style={{
-                    padding: '0.75rem 1.25rem',
+                    padding: '0.625rem 1rem',
                     borderRadius: RADIUS.full,
                     border: 'none',
                     background: activeCategory === category 
@@ -340,12 +352,13 @@ const videos = [
                       ? COLORS.neutral.white 
                       : COLORS.neutral.gray700,
                     fontWeight: '600',
-                    fontSize: '0.875rem',
+                    fontSize: '0.75rem',
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
                     whiteSpace: 'nowrap',
                     boxShadow: activeCategory === category ? SHADOWS.md : 'none',
                   }}
+                  className="sm:text-sm sm:py-3 sm:px-5"
                   onMouseEnter={(e) => {
                     if (activeCategory !== category) {
                       e.currentTarget.style.background = COLORS.neutral.gray200;
@@ -366,31 +379,34 @@ const videos = [
       </section>
 
       {/* Video Resources Section */}
-      <section style={{ padding: '4rem 0', background: COLORS.neutral.gray50 }}>
+      <section style={{ padding: '3rem 0', background: COLORS.neutral.gray50 }} className="sm:py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ marginBottom: '3rem', textAlign: 'center' }}
+            style={{ marginBottom: '2rem', textAlign: 'center' }}
+            className="sm:mb-12"
           >
             <h2 style={{
-              fontSize: 'clamp(2rem, 4vw, 2.5rem)',
+              fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
               fontWeight: '700',
               color: COLORS.neutral.gray900,
-              marginBottom: '1rem',
-            }}>
+              marginBottom: '0.75rem',
+            }}
+            className="sm:mb-4"
+            >
               Video Library
             </h2>
             <p style={{
-              fontSize: '1.125rem',
+              fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)',
               color: COLORS.neutral.gray600,
             }}>
               Watch expert insights and training materials on climate action
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {videos.map((video, index) => (
               <motion.div
                 key={index}
@@ -433,22 +449,26 @@ const videos = [
                 </div>
 
                 {/* Video Info */}
-                <div style={{ padding: '1.5rem' }}>
+                <div style={{ padding: '1rem' }} className="sm:p-6">
                   <h3 style={{
-                    fontSize: '1.125rem',
+                    fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)',
                     fontWeight: '700',
                     color: COLORS.neutral.gray900,
-                    marginBottom: '0.75rem',
-                  }}>
+                    marginBottom: '0.5rem',
+                  }}
+                  className="sm:mb-3"
+                  >
                     {video.title}
                   </h3>
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '1rem',
-                    fontSize: '0.875rem',
+                    gap: '0.75rem',
+                    fontSize: '0.75rem',
                     color: COLORS.neutral.gray600,
-                  }}>
+                  }}
+                  className="sm:text-sm sm:gap-4"
+                  >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                       <FiPlayCircle size={14} />
                       <span>{video.duration}</span>
@@ -466,7 +486,7 @@ const videos = [
       </section>
 
       {/* Resource Categories - Bento Grid */}
-      <section style={{ padding: '4rem 0', background: COLORS.neutral.white }}>
+      <section style={{ padding: '3rem 0', background: COLORS.neutral.white }} className="sm:py-16">
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -474,7 +494,7 @@ const videos = [
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="grid lg:grid-cols-2 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6"
             >
               {filteredCategories.map((category, i) => (
                 <ResourceCategoryCard key={i} category={category} index={i} />
@@ -486,33 +506,38 @@ const videos = [
 
       {/* External Links - Cards */}
       <section style={{
-        padding: '4rem 0',
+        padding: '3rem 0',
         background: `linear-gradient(135deg, ${COLORS.neutral.gray50}, ${COLORS.primary.green50})`,
-      }}>
+      }}
+      className="sm:py-16"
+      >
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            style={{ marginBottom: '3rem', textAlign: 'center' }}
+            style={{ marginBottom: '2rem', textAlign: 'center' }}
+            className="sm:mb-12"
           >
             <h2 style={{
-              fontSize: 'clamp(2rem, 4vw, 2.5rem)',
+              fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
               fontWeight: '700',
               color: COLORS.neutral.gray900,
-              marginBottom: '1rem',
-            }}>
+              marginBottom: '0.75rem',
+            }}
+            className="sm:mb-4"
+            >
               Useful Links
             </h2>
             <p style={{
-              fontSize: '1.125rem',
+              fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)',
               color: COLORS.neutral.gray600,
             }}>
               Partner organizations and climate resources
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {externalLinks.map((link, i) => (
               <motion.a
                 key={i}
@@ -527,13 +552,14 @@ const videos = [
                   display: 'block',
                   background: COLORS.neutral.white,
                   borderRadius: RADIUS.xl,
-                  padding: '2rem',
+                  padding: '1.5rem',
                   textAlign: 'center',
                   textDecoration: 'none',
                   boxShadow: SHADOWS.md,
                   transition: 'all 0.3s ease',
                   border: `2px solid ${COLORS.neutral.gray100}`,
                 }}
+                className="sm:p-8"
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = SHADOWS.xl;
                   e.currentTarget.style.transform = 'translateY(-5px)';
@@ -546,28 +572,35 @@ const videos = [
                 }}
               >
                 <div style={{
-                  fontSize: '3rem',
-                  marginBottom: '1rem',
-                }}>
+                  fontSize: '2.5rem',
+                  marginBottom: '0.75rem',
+                }}
+                className="sm:mb-4"
+                >
                   <img 
                     src={link.logo_url} 
                     alt={link.name} 
-                    style={{ width: '78px', height: '78px', objectFit: 'contain', margin: '0 auto' }} 
+                    style={{ width: '64px', height: '64px', objectFit: 'contain', margin: '0 auto' }} 
+                    className="sm:w-20 sm:h-20"
                   />
                 </div>
                 <h3 style={{
-                  fontSize: '1.125rem',
+                  fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)',
                   fontWeight: '700',
                   color: COLORS.neutral.gray900,
-                  marginBottom: '0.5rem',
-                }}>
+                  marginBottom: '0.375rem',
+                }}
+                className="sm:mb-2"
+                >
                   {link.name}
                 </h3>
                 <p style={{
-                  fontSize: '0.875rem',
+                  fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
                   color: COLORS.neutral.gray600,
-                  marginBottom: '1rem',
-                }}>
+                  marginBottom: '0.75rem',
+                }}
+                className="sm:mb-4"
+                >
                   {link.description}
                 </p>
                 <div style={{
@@ -576,10 +609,12 @@ const videos = [
                   gap: '0.5rem',
                   color: COLORS.primary.green600,
                   fontWeight: '600',
-                  fontSize: '0.875rem',
-                }}>
+                  fontSize: '0.75rem',
+                }}
+                className="sm:text-sm"
+                >
                   Visit Site
-                  <ExternalLink size={14} />
+                  <ExternalLink size={12} className="sm:w-4 sm:h-4" />
                 </div>
               </motion.a>
             ))}
@@ -589,11 +624,13 @@ const videos = [
 
       {/* Newsletter CTA */}
       <section style={{
-        padding: '5rem 0',
+        padding: '3rem 0',
         background: GRADIENTS.ctaGreen,
         position: 'relative',
         overflow: 'hidden',
-      }}>
+      }}
+      className="sm:py-20"
+      >
         <div style={{
           position: 'absolute',
           top: '-20%',
@@ -613,52 +650,60 @@ const videos = [
             className="max-w-3xl mx-auto text-center"
           >
             <h2 style={{
-              fontSize: 'clamp(2rem, 5vw, 3rem)',
+              fontSize: 'clamp(1.5rem, 6vw, 3rem)',
               fontWeight: '700',
               color: COLORS.neutral.white,
-              marginBottom: '1.5rem',
-            }}>
+              marginBottom: '1rem',
+            }}
+            className="sm:mb-6"
+            >
               Stay Updated on New Resources
             </h2>
             <p style={{
-              fontSize: '1.125rem',
+              fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)',
               color: 'rgba(255, 255, 255, 0.9)',
-              marginBottom: '2.5rem',
-            }}>
+              marginBottom: '2rem',
+            }}
+            className="sm:mb-10"
+            >
               Subscribe to our newsletter for the latest resources, updates, and opportunities
             </p>
 
             <div style={{
               display: 'flex',
-              gap: '1rem',
+              flexDirection: 'column',
+              gap: '0.75rem',
               maxWidth: '500px',
               margin: '0 auto',
             }}
-            className="flex-col sm:flex-row"
+            className="sm:flex-row sm:gap-4"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
                 style={{
                   flex: 1,
-                  padding: '1rem 1.5rem',
+                  padding: '0.875rem 1.25rem',
                   borderRadius: RADIUS.lg,
                   border: 'none',
-                  fontSize: '1rem',
+                  fontSize: '0.875rem',
                   outline: 'none',
                 }}
+                className="sm:text-base sm:py-4"
               />
               <button style={{
-                padding: '1rem 2rem',
+                padding: '0.875rem 1.75rem',
                 background: COLORS.neutral.white,
                 color: COLORS.primary.green600,
                 border: 'none',
                 borderRadius: RADIUS.lg,
                 fontWeight: '700',
+                fontSize: '0.875rem',
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
                 transition: 'all 0.3s ease',
               }}
+              className="sm:text-base sm:py-4 sm:px-8"
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
               >
@@ -675,9 +720,9 @@ const videos = [
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-green-600 to-primary-dark text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition z-40"
+        className="fixed bottom-6 right-6 w-12 h-12 sm:w-14 sm:h-14 sm:bottom-8 sm:right-8 bg-gradient-to-r from-green-600 to-primary-dark text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition z-40"
       >
-        <BsArrowUpCircle size={28} />
+        <BsArrowUpCircle size={24} className="sm:w-7 sm:h-7" />
       </motion.button>
 
       <style>{`
@@ -706,27 +751,30 @@ const ResourceCategoryCard = ({ category, index }) => {
       style={{
         background: COLORS.neutral.white,
         borderRadius: RADIUS.xl,
-        padding: '2rem',
+        padding: '1.5rem',
         boxShadow: SHADOWS.lg,
         border: `2px solid ${COLORS.neutral.gray100}`,
       }}
+      className="sm:p-8"
     >
       {/* Header */}
-      <div style={{ marginBottom: '2rem' }}>
+      <div style={{ marginBottom: '1.5rem' }} className="sm:mb-8">
         <div style={{
-          width: '4rem',
-          height: '4rem',
+          width: '3rem',
+          height: '3rem',
           borderRadius: RADIUS.lg,
           background: category.gradient,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          marginBottom: '1rem',
-        }}>
-          <category.icon size={28} style={{ color: COLORS.neutral.white }} />
+          marginBottom: '0.75rem',
+        }}
+        className="sm:w-16 sm:h-16 sm:mb-4"
+        >
+          <category.icon size={24} style={{ color: COLORS.neutral.white }} className="sm:w-7 sm:h-7" />
         </div>
         <h3 style={{
-          fontSize: '1.5rem',
+          fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
           fontWeight: '700',
           color: COLORS.neutral.gray900,
         }}>
@@ -735,7 +783,7 @@ const ResourceCategoryCard = ({ category, index }) => {
       </div>
 
       {/* Resources List */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }} className="sm:gap-3">
         {category.resources.map((resource, j) => (
           <div
             key={j}
@@ -745,7 +793,7 @@ const ResourceCategoryCard = ({ category, index }) => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              padding: '1rem',
+              padding: '0.875rem',
               background: hoveredItem === j ? COLORS.neutral.gray50 : COLORS.neutral.gray50,
               borderRadius: RADIUS.lg,
               cursor: 'pointer',
@@ -753,30 +801,40 @@ const ResourceCategoryCard = ({ category, index }) => {
               transform: hoveredItem === j ? 'translateX(5px)' : 'translateX(0)',
               border: `2px solid ${hoveredItem === j ? category.color : 'transparent'}`,
             }}
+            className="sm:p-4"
           >
-            <div style={{ flex: 1 }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
               <p style={{
                 fontWeight: '600',
+                fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
                 color: hoveredItem === j ? category.color : COLORS.neutral.gray900,
                 marginBottom: '0.25rem',
                 transition: 'color 0.3s ease',
-              }}>
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+              }}
+              className="sm:whitespace-normal"
+              >
                 {resource.name}
               </p>
               <p style={{
-                fontSize: '0.875rem',
+                fontSize: 'clamp(0.6875rem, 1.75vw, 0.875rem)',
                 color: COLORS.neutral.gray600,
               }}>
                 {resource.type} • {resource.size} • {resource.downloads} downloads
               </p>
             </div>
             <GrCloudDownload 
-              size={20} 
+              size={18} 
               style={{ 
                 color: hoveredItem === j ? category.color : COLORS.neutral.gray400,
                 transition: 'all 0.3s ease',
                 transform: hoveredItem === j ? 'scale(1.2)' : 'scale(1)',
+                flexShrink: 0,
+                marginLeft: '0.5rem',
               }} 
+              className="sm:w-5 sm:h-5"
             />
           </div>
         ))}
