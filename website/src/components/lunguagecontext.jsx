@@ -50,7 +50,7 @@ export const translations = {
       },
       promise: {
         title: 'Our Promise',
-        text: 'We commit to delivering high-integrity climate solutions that prioritize community empowerment, transparent governance, and measurable impact while fostering partnerships that create lasting value for Zimbabwe.',
+        text: 'We convert climate commitments into tangible, investable and verifiable outcomes that protect communities, build resilience, restore nature and unlock sustainable growth. Every project supported by ZCAC must meet high impact standards, community consent, enforceable benefitsharing and investor grade verification — making climate finance a reality, working for people, places and prosperity to achieve sustainable development. Every Corporate ESG report validated must meet high integrity and rigorous standards, verifiable outcomes with genuine climate impact disclosures on the GHG inventory and measurable net zero targets.',
       },
       services: {
         title: 'Core Services',
