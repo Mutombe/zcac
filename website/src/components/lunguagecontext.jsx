@@ -24,6 +24,7 @@ export const translations = {
       events: 'Events',
       faqs: 'FAQs',
       contact: 'Contact',
+      membership: 'Membership',
     },
     home: {
       hero: {
@@ -45,7 +46,7 @@ export const translations = {
       },
       vision: {
         title: 'Our Vision',
-        text: 'A Zimbabwe where climate action drives inclusive prosperity, environmental resilience, and sustainable livelihoods for all communities, ensuring no one is left behind in the transition to a low-carbon future.',
+        text: 'A resilient and low-carbon Zimbabwe where communities thrive through equitable, high-integrity climate action and carbon market participation.',
       },
       promise: {
         title: 'Our Promise',
@@ -124,6 +125,7 @@ export const translations = {
       events: 'Imicimbi',
       faqs: 'Imibuzo',
       contact: 'Xhumana',
+      membership: 'Imisebenzi',
     },
     home: {
       hero: {
@@ -224,6 +226,7 @@ export const translations = {
       events: 'Eventos',
       faqs: 'Preguntas',
       contact: 'Contacto',
+      membership: 'Miembro',
     },
     home: {
       hero: {

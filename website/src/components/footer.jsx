@@ -369,7 +369,19 @@ const Footer = () => {
                     marginTop: "0.125rem",
                   }}
                 />
-                <span>+263 XXX XXXX</span>
+                <span>+263 71 302 0467</span>
+              </li>
+              <li style={contactItemStyle}>
+                <Phone
+                  style={{
+                    width: "1.25rem",
+                    height: "1.25rem",
+                    color: COLORS.primary.green,
+                    flexShrink: 0,
+                    marginTop: "0.125rem",
+                  }}
+                />
+                <span>+263 78 475 2721</span>
               </li>
               <li style={contactItemStyle}>
                 <MapPin
@@ -381,7 +393,7 @@ const Footer = () => {
                     marginTop: "0.125rem",
                   }}
                 />
-                <span>Harare, Zimbabwe</span>
+                <span>19 Fort Street, Bulawayo</span>
               </li>
             </ul>
           </div>

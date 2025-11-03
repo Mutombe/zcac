@@ -19,6 +19,7 @@ import FAQs from "./components/faq";
 import Contact from "./components/contact";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Membership from "./components/membership";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -36,33 +37,6 @@ function App() {
       <Router>
         <div className="App min-h-screen flex flex-col gellix-font">
           <style jsx>{`
-            @font-face {
-              font-family: "Gravesend Sans";
-              src: url("./fonts/fonnts.com-Gravesend_Sans_Light.otf")
-                format("opentype");
-              font-weight: 300;
-              font-style: normal;
-              font-display: swap;
-            }
-
-            @font-face {
-              font-family: "Gravesend Sans";
-              src: url("./fonts/fonnts.com-Gravesend_Sans_Medium.otf")
-                format("opentype");
-              font-weight: 500;
-              font-style: normal;
-              font-display: swap;
-            }
-
-            @font-face {
-              font-family: "Gravesend Sans";
-              src: url("./fonts/fonnts.com-Gravesend_Sans_Bold.otf")
-                format("opentype");
-              font-weight: 700;
-              font-style: normal;
-              font-display: swap;
-            }
-
             /* Century Gothic Font Face */
             @font-face {
               font-family: "Century Gothic Custom";
@@ -127,6 +101,7 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/faqs" element={<FAQs />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/membership" element={<Membership />} />
             </Routes>
           </main>
           <Footer />

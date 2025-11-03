@@ -261,6 +261,7 @@ const Navbar = () => {
     { path: '/about', label: t('nav.about') },
     { path: '/what-we-do', label: t('nav.whatWeDo') },
     { path: '/projects', label: t('nav.projects') },
+    { path: '/membership', label: t('nav.membership') || 'Membership' },
     { path: '/blog', label: t('nav.blog') },
     { path: '/faqs', label: t('nav.faqs') },
     { path: '/contact', label: t('nav.contact') },
