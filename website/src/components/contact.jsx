@@ -59,7 +59,7 @@ const Contact = () => {
   const initMap = () => {
     if (typeof window !== "undefined" && window.L) {
       // Harare coordinates
-      const map = window.L.map("map").setView([-17.8252, 31.0335], 13);
+      const map = window.L.map("map").setView([-20.160641, 28.582354,16.1], 13);
 
       window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: "© OpenStreetMap contributors",
@@ -78,9 +78,9 @@ const Contact = () => {
       });
 
       // Add marker
-      window.L.marker([-17.8252, 31.0335], { icon: customIcon })
+      window.L.marker([-20.160641, 28.582354,16.1], { icon: customIcon })
         .addTo(map)
-        .bindPopup("<b>CACZ Headquarters</b><br>Harare, Zimbabwe")
+        .bindPopup("<b>CACZ Headquarters</b><br>Bulawayo, Zimbabwe")
         .openPopup();
     }
   };
@@ -125,13 +125,6 @@ const Contact = () => {
       href: "https://facebook.com",
       color: "#1877F2",
       gradient: "linear-gradient(135deg, #1877F2, #0C63D4)",
-    },
-    {
-      icon: FaXTwitter,
-      name: "X",
-      href: "https://twitter.com",
-      color: "#1DA1F2",
-      gradient: "linear-gradient(135deg, #1DA1F2, #0C85D0)",
     },
     {
       icon: Linkedin,
