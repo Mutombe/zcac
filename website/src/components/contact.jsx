@@ -876,7 +876,7 @@ const Contact = () => {
                 color: COLORS.neutral.gray600,
               }}
             >
-              CACZ Headquarters, Harare, Zimbabwe
+              CACZ Headquarters, Bulawayo, Zimbabwe
             </p>
           </motion.div>
 
